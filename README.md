@@ -1,4 +1,4 @@
-**Link to project:** [myTodoApp link](https://mytodoappletsgetit.netlify.app/))
+**Link to project:** [myTodoApp link](https://mytodoappletsgetit.netlify.app/)
 
 ## Description:
 Made a todo app with couple of cool functionalities, check it out and feel free to contribute.
