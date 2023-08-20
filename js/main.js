@@ -118,22 +118,38 @@ function renderTodoCard(todo) {
 
     return taskContainer;
 }
+
+function renderDefaultMessage() {
+    const defaultTodoContainer = document.createElement("div")
+    defaultTodoContainer.classList.add('default-todo-container')
+
+    defaultTodoContainer.innerHTML = `
+        <i class="fa-solid fa-clipboard-list fa-2xl" style="color: #CA5646;"></i>
+        <h4>There are no Tasks to preview. Please click the icon below to add a new Task.</h4>
+    `;
+
+    return defaultTodoContainer;
+}
   
 function renderTodos(todos) {
     computeMenuCounter()
-    if(!todos.length) return
+    if(!todos.length) {
+        taskList.appendChild(renderDefaultMessage())
+        completedTaskList.appendChild(renderDefaultMessage())
+    }
+    else {
+        taskList.innerHTML = "";
+        completedTaskList.innerHTML = "";
 
-    taskList.innerHTML = "";
-    completedTaskList.innerHTML = "";
-
-    todos.forEach((todo) => {
-        if(!todo.isCompleted) {
-           taskList.appendChild(renderTodoCard(todo)); 
-        }
-        else {
-            completedTaskList.appendChild(renderTodoCard(todo))
-        }
-    });
+        todos.forEach((todo) => {
+            if(!todo.isCompleted) {
+            taskList.appendChild(renderTodoCard(todo)); 
+            }
+            else {
+                completedTaskList.appendChild(renderTodoCard(todo))
+            }
+        });
+    }
 }
 
 addTaskBtn.addEventListener('click', () => {
