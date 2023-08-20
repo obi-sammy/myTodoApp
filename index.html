@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/26dc8a4763.js" crossorigin="anonymous"></script>
+    <title>TodoApp</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+            </div>
+
+            <div class="nav-container" id="navContainer">
+                <ul class="nav-list">
+                    <li><a href="">ROUTINE</a></li>
+                    <li><a href="">PERSONAL</a></li>
+                    <li><a href="">WORK</a></li>
+                    <li><a href="">COMPLETED</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-container">
+                <div class="counter-container">
+                    <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+                    <p id="menuCounter"></p>
+                </div>
+
+                <div class="notification-container">
+                    <i class="fa-regular fa-bell" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="profile-picture-container">
+                    <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="today-tasks-section" id="todayTasksSection">
+            <div class="date-container">
+                <h2>Today <span id="dateSpan">Wed 14 Sep</span></h2>
+            </div>
+
+            <div class="tasks-container" id="tasksContainer">
+                <div class="task-list" id="taskList">
+                    <h3>No Todos yet</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="completed-tasks-section" id="completedTasksSection">
+            <div>
+               <h3>Completed Tasks</h3> 
+            </div>
+
+            <div class="completed-tasks-list-container">
+                <div class="task-list" id="completedTaskList">
+                    <h4>No task has been completed</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-task-section" id="addTaskSection">
+            <form class="todoForm" id="todoForm">
+                <div class="form-text-container">
+                    <label for="todoInput">Add your task:</label>
+                    <input type="text" id="todoInput" name="todoInput" required placeholder="Task name">
+                </div>
+
+                <div class="form-radio-container">
+                    <p>Choose your task type</p>
+                    <input type="radio" id="routine" name="todoType" value="Routine">
+                    <label for="routine">Routine</label> <br>
+                    <input type="radio" id="personal" name="todoType" value="Personal" checked>
+                    <label for="personal">Personal</label> <br>
+                    <input type="radio" id="work" name="todoType" value="Work">
+                    <label for="work">Work</label> <br>
+                </div>
+                
+                <div class="form-button-container">
+                    <button class="form-cancel-button" id="formCancelBtn">Cancel</button>
+                    <button class="form-add-task-button" id="formAddTaskBtn">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="add-task-button" id="addTaskBtn">
+            <i class="fa-solid fa-plus fa-lg" style="color: #ffffff;"></i>
+        </div>
+
+        <div class="completed-tasks-popup-container" id="completedTasksPopup">
+            <div class="completed-tasks-popup-flex">
+                <p>1 task completed</p>
+                <i class="fa-solid fa-xmark fa-sm"></i>
+            </div>
+        </div>
+    </main>
+
+<script src="js/main.js"></script>
+</body>
