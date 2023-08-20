@@ -97,7 +97,6 @@ function renderTodoCard(todo) {
     taskContainer.classList.add("task-container");
     taskContainer.classList.add(`${secondClass}`)
     
-    // add checked="${todo.isCompleted}" to input//
     taskContainer.innerHTML = `
         <div class="text-container">
             <div class="round">
@@ -105,7 +104,7 @@ function renderTodoCard(todo) {
                  <input 
                     type="checkbox" 
                     class="rounded-checkbox"
-                    id="checkbox" />
+                    id="checkbox" ${todo.isCompleted ? 'checked' : ''}/>
                 </label>
             </div>
             <p>${todo.content}</p>
