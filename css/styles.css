@@ -303,11 +303,25 @@ main {
     display: block;
 }
 
-
 .completed-tasks-popup-flex {
     display: flex;
     align-items: center;
     gap: 3rem;
     font-size: 1.2rem;
     padding: .7rem 1rem;
+}
+
+.default-todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.default-todo-container h4 {
+    padding-top: 2rem;
+    max-width: 30%;
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
