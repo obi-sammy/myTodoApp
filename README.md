@@ -9,5 +9,6 @@ Made a todo app with couple of cool functionalities, check it out and feel free 
 - [ ] Add a few animations.
 - [ ] Make items on the hamburger menu functional.
 - [x] Add an icon when there is no todo present.
+- [x] Add checked attribute to completed tasks.
 - [ ] Add a delete button on the todo items.
 - [ ] Change to a react app and add a backend for better optimization.
