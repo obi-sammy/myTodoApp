@@ -5,13 +5,13 @@ Made a todo app with couple of cool functionalities, check it out and feel free 
 ## How It's Made:
 **Tech used:** HTML, Vanilla CSS, Javascript.
 ## Areas for Improvement :
-- [ ] Make app responsive on all screen sizes.
+- [x] Make app responsive on all screen sizes.
 - [ ] Add a few animations.
 - [ ] Make items on the hamburger menu functional.
-- [x] Add an icon when there is no todo present.
+- [x] Add a message when there is no todo present on initial render.
 - [x] Add checked attribute to completed tasks.
 - [x] Add a delete button on the todo items.
 - [ ] Change to a react app and add a backend for better optimization.
-- [ ] Refactor code
-- [ ] Add comments where necessary
-      
+- [ ] Refactor code.
+- [ ] Add comments where necessary.
+- [ ] Add a message when there is no todo present when all tasks added have been completed.      
