@@ -10,6 +10,7 @@ const completedTaskList = document.getElementById('completedTaskList')
 const dateSpan = document.getElementById('dateSpan')
 const completedTasksPopup = document.getElementById('completedTasksPopup')
 const menuCounter = document.getElementById('menuCounter')
+const todoDeleteButton = document.getElementById('todoDeleteButton')
 
 
 function getTodosFromLocalStorage() {
@@ -91,11 +92,13 @@ function displayRadioValue() {
 }
 
 function renderTodoCard(todo) {
-    const secondClass = `${(todo.todoType)}-task-container`
+    const secondClass = `${todo.todoType.toLowerCase()}-task-container`
 
     const taskContainer = document.createElement("div");
     taskContainer.classList.add("task-container");
     taskContainer.classList.add(`${secondClass}`)
+
+    const todoDeleteButtonTypeClass = `${todo.todoType.toLowerCase()}-delete-button`
     
     taskContainer.innerHTML = `
         <div class="text-container">
@@ -112,6 +115,8 @@ function renderTodoCard(todo) {
 
         <div class="task-type-container">
             <p>${todo.todoType}</p>
+            <i class="fa-solid fa-trash-can todo-delete-button ${todoDeleteButtonTypeClass}" id="todoDeleteButton" 
+            onClick="deleteTodo(${todo.id})" ></i>
         </div>
     `;
 
@@ -168,7 +173,7 @@ hamburgerMenu.addEventListener('click', () => {
 })
 
 function markCompleted(todoItem){
-    let todoFromLocalStorage = getTodosFromLocalStorage()
+    const todoFromLocalStorage = getTodosFromLocalStorage()
     todoFromLocalStorage.map((x) => x.id === todoItem ? x.isCompleted = true : '')
     localStorage.setItem('todoData', JSON.stringify(todoFromLocalStorage))
 
@@ -177,4 +182,14 @@ function markCompleted(todoItem){
       }, "500");
     
     completedTasksPopup.classList.add('active')
+}
+
+function deleteTodo(todoItem) {
+    const todoFromLocalStorage = getTodosFromLocalStorage()
+    const filteredTodo = todoFromLocalStorage.filter((x) => x.id !== todoItem)
+    localStorage.setItem('todoData', JSON.stringify(filteredTodo))
+
+    setTimeout(() => {
+        location.reload()
+      }, "250");
 }
