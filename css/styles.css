@@ -99,13 +99,31 @@ main {
 .text-container,
 .task-type-container {
     display: flex;
+    gap: 1rem;
 }
 
 .text-container {
-    gap: 1rem;
     align-items: center;
     padding-bottom: 1.5rem;
     padding-left: .7rem;
+}
+
+.routine-delete-button {
+   color: #C27775; 
+}
+
+.personal-delete-button {
+    color: #DEA263;
+}
+
+.work-delete-button {
+    color: #BEA6A1;
+}
+
+.routine-delete-button:hover,
+.work-delete-button:hover,
+.personal-delete-button:hover {
+    color: gray;
 }
 
 .task-type-container {
@@ -132,39 +150,39 @@ main {
     background-color: #ccc;
 }
 
-.Routine-task-container {
+.routine-task-container {
     border: 1px solid #C27775;
 }
 
-.Routine-task-container .rounded-checkbox {
+.routine-task-container .rounded-checkbox {
     border: 2.5px solid #C27775;
 }
 
-.Routine-task-container .rounded-checkbox:checked {
+.routine-task-container .rounded-checkbox:checked {
     background-color: #C27775;
 }
 
-.Personal-task-container {
+.personal-task-container {
     border: 1px solid #DEA263;
 }
 
-.Personal-task-container .rounded-checkbox {
+.personal-task-container .rounded-checkbox {
     border: 2.5px solid #DEA263;
 }
 
-.Personal-task-container .rounded-checkbox:checked {
+.personal-task-container .rounded-checkbox:checked {
     background-color: #DEA263;
 }
 
-.Work-task-container {
+.work-task-container {
     border: 1px solid #BEA6A1;
 }
 
-.Work-task-container .rounded-checkbox {
+.work-task-container .rounded-checkbox {
     border: 2.5px solid #BEA6A1;
 }
 
-.Work-task-container .rounded-checkbox:checked {
+.work-task-container .rounded-checkbox:checked {
     background-color: #BEA6A1;
 }
 
