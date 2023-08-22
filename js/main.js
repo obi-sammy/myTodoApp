@@ -11,6 +11,7 @@ const dateSpan = document.getElementById('dateSpan')
 const completedTasksPopup = document.getElementById('completedTasksPopup')
 const menuCounter = document.getElementById('menuCounter')
 const todoDeleteButton = document.getElementById('todoDeleteButton')
+const mainSection = document.getElementById('mainSection')
 
 
 function getTodosFromLocalStorage() {
@@ -170,6 +171,7 @@ formCancelBtn.addEventListener('click', () => {
 
 hamburgerMenu.addEventListener('click', () => {
     navContainer.classList.toggle('active')
+    mainSection.classList.toggle('add-padding-to-main-when-hamburger-is-active')
 })
 
 function markCompleted(todoItem){
@@ -191,5 +193,5 @@ function deleteTodo(todoItem) {
 
     setTimeout(() => {
         location.reload()
-      }, "250");
+      }, "200");
 }
